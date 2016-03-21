@@ -1,0 +1,4 @@
+name = "highway-fcn"
+repo = "https://github.com/fomorians/highway-fcn.git"
+description = "Fully-connected highway networks with TensorFlow"
+environment = "tensorflow"
