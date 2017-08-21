@@ -32,7 +32,7 @@ def highway_layer(x, size, activation, carry_bias=-1.0):
     W, b = weight_bias([size, size], [size])
 
     with tf.name_scope('transform_gate'):
-        W_T, b_T = weight_bias([size, size], bias_init=carry_bias)
+        W_T, b_T = weight_bias([size, size], [size], bias_init=carry_bias)
 
     H = activation(tf.matmul(x, W) + b, name='activation')
     T = tf.sigmoid(tf.matmul(x, W_T) + b_T, name='transform_gate')
